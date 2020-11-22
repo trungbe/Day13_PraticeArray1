@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+    <!--    Viết chương trình khởi tạo mảng số nguyên. -->
+    <!--    Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.-->
+</head>
+<body>
+<p id="display"></p>
+<p id="maxvalue"></p>
+<p id="average"></p>
+<script>
+    let arr = [5, 8, 9, 4, 10, 67, 89, 45, 99, 12];
+    document.getElementById('display').innerHTML = "Mảng: " + arr;
+
+    function findMaxValue() {
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    document.getElementById('maxvalue').innerHTML = "Giá trị lớn nhất trong mảng là " + findMaxValue();
+
+    function findAverage() {
+        let average ;
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+            total += arr[i] ;
+            average = total / arr.length;
+        }
+        return  average ;
+    }
+    document.getElementById('average').innerHTML = "Giá trị trung bình các phần tử trong mảng là : " + findAverage();
+</script>
+</body>
+</html>

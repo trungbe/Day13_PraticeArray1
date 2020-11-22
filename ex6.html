@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. -->
+<!--    Chương trình tìm xem V có nằm trong mảng số nguyên không? -->
+<!--    Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".-->
+</head>
+<body>
+<input type="text " id="find">
+<button onclick="checkValue()">Check</button>
+<p id="display"></p>
+<script>
+    let arr = [-5, -8, -9, -4, -10, 67, 89, 45, 99, -12];
+    function checkValue(){
+        let value = document.getElementById('find').value;
+        for (let i = 0; i < arr.length; i++) {
+            if (value == arr[i]) {
+                document.getElementById('display').innerHTML =value + ' is in the array'  ;
+            }else{
+                document.getElementById('display').innerHTML =value + ' is not in the array'  ;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

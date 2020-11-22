@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+    <!--    Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. -->
+    <!--    Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.-->
+</head>
+<body>
+<p id="display"></p>
+<p id="count"></p>
+<p id="outputArr"></p>
+<script>
+
+    let arr = [5, 8, 9, 4, 10, 67, 89, 45, 99, 12];
+    let count = 0;
+    let outputArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 10) {
+            outputArr.push(arr[i]);
+            count++;
+        }
+    }
+    document.getElementById('display').innerHTML="Dãy số có: " + arr;
+    document.getElementById('count').innerHTML = "Có tất cả " + count + " số lớn hơn 10";
+    document.getElementById('outputArr').innerHTML = "Các số lớn hơn hoặc bằng 10 là: " + outputArr;
+
+
+</script>
+</body>
+</html>

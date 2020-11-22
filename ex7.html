@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. -->
+<!--    Chương trình kiểm tra xem V có thuộc mảng đã cho không, -->
+<!--    nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)-->
+</head>
+<body>
+<input type="text " id="find">
+<button onclick="checkValue()">Check</button>
+<p id="display"></p>
+<script>
+    let arr = [-5, -8, -9, -4, -10, 67, 89, 45, 99, -12];
+    function deleteValue() {
+        for (let i = 0; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr.length--;
+    }
+    function checkValue(){
+        let value = document.getElementById('find').value;
+        for (let i = 0; i < arr.length; i++) {
+            if (value == arr[i]) {
+                 deleteValue();
+            }
+        }
+    }
+
+    //document.getElementById('display').innerHTML = "Mảng ban đầu: " + arr;
+</script>
+</body>
+</html>

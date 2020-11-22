@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+    <!--    Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi-->
+</head>
+<body>
+<p id="display"></p>
+<p id="negative"></p>
+<script>
+    let arr = [-5, -8, -9, -4, -10, 67, 89, 45, 99, -12];
+    document.getElementById('display').innerHTML = "Mảng ban đầu: " + arr;
+
+
+    function negativeNumber() {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    document.getElementById('negative').innerHTML = "Số nguyên âm có trong mảng là: " + negativeNumber();
+
+</script>
+</body>
+</html>

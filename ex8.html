@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. -->
+    <!--    Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.-->
+</head>
+<body>
+<script>
+    let arr = [-5, -8, -9, -4, -10, 67, 89, 45, 99, -12];
+
+    function range() {
+
+        for (i = 0; i < arr.length; i++) {
+            for (j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    let temp = arr[i]
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        document.write(arr)
+    }
+    range(arr.length, arr)
+</script>
+</body>
+</html>
